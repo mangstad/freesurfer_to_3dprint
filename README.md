@@ -16,3 +16,5 @@ At the moment the plan is:
    8. render this image and bake the material to a texture
    9. save out that texture file for use with the model
    
+Actually, seems like meshlab might be able to directly calculate a texture map from the per-vertex color, so steps 6-9 may be much simpler
+https://groups.google.com/forum/#!topic/skanect/HBoixK8rdLc
