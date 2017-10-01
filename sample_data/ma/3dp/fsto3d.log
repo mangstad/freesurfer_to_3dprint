@@ -1,0 +1,104 @@
+label: bankssts, val: 1664040.000000000
+label: caudalanteriorcingulate, val: 8217760.000000000
+label: caudalmiddlefrontal, val: 6560000.000000000
+label: cuneus, val: 14423140.000000000
+label: entorhinal, val: 14423050.000000000
+label: fusiform, val: 11852940.000000000
+label: inferiorparietal, val: 14433500.000000000
+label: inferiortemporal, val: 11806840.000000000
+label: isthmuscingulate, val: 9180300.000000000
+label: lateraloccipital, val: 1318540.000000000
+label: lateralorbitofrontal, val: 2313010.000000000
+label: lingual, val: 14781580.000000000
+label: medialorbitofrontal, val: 13116235.000000000
+label: middletemporal, val: 10511410.000000000
+label: parahippocampal, val: 1367100.000000000
+label: paracentral, val: 3988540.000000000
+label: parsopercularis, val: 14464140.000000000
+label: parsorbitalis, val: 1336370.000000000
+label: parstriangularis, val: 14433300.000000000
+label: pericalcarine, val: 7889980.000000000
+label: postcentral, val: 14423060.000000000
+label: posteriorcingulate, val: 14464220.000000000
+label: precentral, val: 3937500.000000000
+label: precuneus, val: 10521780.000000000
+label: rostralanteriorcingulate, val: 5248140.000000000
+label: rostralmiddlefrontal, val: 4928125.000000000
+label: superiorfrontal, val: 1367200.000000000
+label: superiorparietal, val: 1356940.000000000
+label: superiortemporal, val: 9231580.000000000
+label: supramarginal, val: 5283860.000000000
+label: frontalpole, val: 6553700.000000000
+label: temporalpole, val: 4592810.000000000
+label: transversetemporal, val: 9869000.000000000
+label: insula, val: 16760864.000000000
+label: bankssts, val: 1664040.000000000
+label: caudalanteriorcingulate, val: 8217760.000000000
+label: caudalmiddlefrontal, val: 6560000.000000000
+label: cuneus, val: 14423140.000000000
+label: entorhinal, val: 14423050.000000000
+label: fusiform, val: 11852940.000000000
+label: inferiorparietal, val: 14433500.000000000
+label: inferiortemporal, val: 11806840.000000000
+label: isthmuscingulate, val: 9180300.000000000
+label: lateraloccipital, val: 1318540.000000000
+label: lateralorbitofrontal, val: 2313010.000000000
+label: lingual, val: 14781580.000000000
+label: medialorbitofrontal, val: 13116235.000000000
+label: middletemporal, val: 10511410.000000000
+label: parahippocampal, val: 1367100.000000000
+label: paracentral, val: 3988540.000000000
+label: parsopercularis, val: 14464140.000000000
+label: parsorbitalis, val: 1336370.000000000
+label: parstriangularis, val: 14433300.000000000
+label: pericalcarine, val: 7889980.000000000
+label: postcentral, val: 14423060.000000000
+label: posteriorcingulate, val: 14464220.000000000
+label: precentral, val: 3937500.000000000
+label: precuneus, val: 10521780.000000000
+label: rostralanteriorcingulate, val: 5248140.000000000
+label: rostralmiddlefrontal, val: 4928125.000000000
+label: superiorfrontal, val: 1367200.000000000
+label: superiorparietal, val: 1356940.000000000
+label: superiortemporal, val: 9231580.000000000
+label: supramarginal, val: 5283860.000000000
+label: frontalpole, val: 6553700.000000000
+label: temporalpole, val: 4592810.000000000
+label: transversetemporal, val: 9869000.000000000
+label: insula, val: 16760864.000000000
+Input mesh  /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/lh.pial.aparc.color.obj
+script /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/script.mlx
+output mesh  /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/lh.pial.aparc.color.final.x3d
+Output mask:
+vertex color, face color, face normals, wedge color, wedge normals, wedge tex coords, Loading Plugins:
+Total 208 filtering actions
+Total 14 io plugins
+Mesh lh.pial.aparc.color.obj loaded has 161868 vn 323732 fn
+Apply FilterScript: '/home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/script.mlx'
+Starting Script of 6 actionsfilter: Quadric Edge Collapse Decimation
+Initializing simplificationSimplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...PostSimplification Cleaning: Removed 17 unreferenced vertices
+filter: Remove Duplicate Faces
+Successfully deleted 8 duplicated faces
+filter: Select non Manifold Edges 
+filter: Delete Selected Faces
+filter: Select non Manifold Vertices
+filter: Delete Selected Faces and Vertices
+Mesh /home/slab/users/mangstad/repos/freesurfer_to_3dprint/sample_data/ma/3dp/lh.pial.aparc.color.obj saved as /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/lh.pial.aparc.color.final.x3d (25003 vn 49965 fn)
+Input mesh  /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/rh.pial.aparc.color.obj
+script /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/script.mlx
+output mesh  /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/rh.pial.aparc.color.final.x3d
+Output mask:
+vertex color, face color, face normals, wedge color, wedge normals, wedge tex coords, Loading Plugins:
+Total 208 filtering actions
+Total 14 io plugins
+Mesh rh.pial.aparc.color.obj loaded has 158486 vn 316968 fn
+Apply FilterScript: '/home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/script.mlx'
+Starting Script of 6 actionsfilter: Quadric Edge Collapse Decimation
+Initializing simplificationSimplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...PostSimplification Cleaning: Removed 20 unreferenced vertices
+filter: Remove Duplicate Faces
+Successfully deleted 7 duplicated faces
+filter: Select non Manifold Edges 
+filter: Delete Selected Faces
+filter: Select non Manifold Vertices
+filter: Delete Selected Faces and Vertices
+Mesh /home/slab/users/mangstad/repos/freesurfer_to_3dprint/sample_data/ma/3dp/rh.pial.aparc.color.obj saved as /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/rh.pial.aparc.color.final.x3d (25002 vn 49968 fn)
