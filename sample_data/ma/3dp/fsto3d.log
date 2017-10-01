@@ -102,3 +102,51 @@ filter: Delete Selected Faces
 filter: Select non Manifold Vertices
 filter: Delete Selected Faces and Vertices
 Mesh /home/slab/users/mangstad/repos/freesurfer_to_3dprint/sample_data/ma/3dp/rh.pial.aparc.color.obj saved as /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/rh.pial.aparc.color.final.x3d (25002 vn 49968 fn)
+label: frontal, val: 6560000.000000000
+label: cingulate, val: 9180300.000000000
+label: occipital, val: 7889980.000000000
+label: temporal, val: 9231580.000000000
+label: parietal, val: 5283860.000000000
+label: insula, val: 16760864.000000000
+label: frontal, val: 6560000.000000000
+label: cingulate, val: 9180300.000000000
+label: occipital, val: 7889980.000000000
+label: temporal, val: 9231580.000000000
+label: parietal, val: 5283860.000000000
+label: insula, val: 16760864.000000000
+Input mesh  /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/lh.pial.lobes.color.obj
+script /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/script.mlx
+output mesh  /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/lh.pial.lobes.color.final.x3d
+Output mask:
+vertex color, face color, face normals, wedge color, wedge normals, wedge tex coords, Loading Plugins:
+Total 208 filtering actions
+Total 14 io plugins
+Mesh lh.pial.lobes.color.obj loaded has 161868 vn 323732 fn
+Apply FilterScript: '/home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/script.mlx'
+Starting Script of 6 actionsfilter: Quadric Edge Collapse Decimation
+Initializing simplificationSimplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...PostSimplification Cleaning: Removed 17 unreferenced vertices
+filter: Remove Duplicate Faces
+Successfully deleted 8 duplicated faces
+filter: Select non Manifold Edges 
+filter: Delete Selected Faces
+filter: Select non Manifold Vertices
+filter: Delete Selected Faces and Vertices
+Mesh /home/slab/users/mangstad/repos/freesurfer_to_3dprint/sample_data/ma/3dp/lh.pial.lobes.color.obj saved as /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/lh.pial.lobes.color.final.x3d (25003 vn 49965 fn)
+Input mesh  /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/rh.pial.lobes.color.obj
+script /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/script.mlx
+output mesh  /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/rh.pial.lobes.color.final.x3d
+Output mask:
+vertex color, face color, face normals, wedge color, wedge normals, wedge tex coords, Loading Plugins:
+Total 208 filtering actions
+Total 14 io plugins
+Mesh rh.pial.lobes.color.obj loaded has 158486 vn 316968 fn
+Apply FilterScript: '/home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/script.mlx'
+Starting Script of 6 actionsfilter: Quadric Edge Collapse Decimation
+Initializing simplificationSimplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...Simplifying...PostSimplification Cleaning: Removed 20 unreferenced vertices
+filter: Remove Duplicate Faces
+Successfully deleted 7 duplicated faces
+filter: Select non Manifold Edges 
+filter: Delete Selected Faces
+filter: Select non Manifold Vertices
+filter: Delete Selected Faces and Vertices
+Mesh /home/slab/users/mangstad/repos/freesurfer_to_3dprint/sample_data/ma/3dp/rh.pial.lobes.color.obj saved as /home/slab/users/mangstad/repos/freesurfer_to_3dprint/./sample_data/ma//3dp/rh.pial.lobes.color.final.x3d (25002 vn 49968 fn)
