@@ -1,5 +1,5 @@
 # freesurfer_to_3dprint
-utilities to help in 3d printing of freesurfer surface images
+1;3201;0cutilities to help in 3d printing of freesurfer surface images
 
 This is in extremely early stages. The goal is to have a defined pathway to start with a freesurfer recon-all output and end up with a 3d model ready for 3d printing along with having a texture map for the model colored based on a particular chosen parcellation.
 
@@ -18,3 +18,9 @@ At the moment the plan is:
    
 Actually, seems like meshlab might be able to directly calculate a texture map from the per-vertex color, so steps 6-9 may be much simpler
 https://groups.google.com/forum/#!topic/skanect/HBoixK8rdLc
+
+
+just leaving this here for the moment to remind me how to generate lobe files 
+mri_annotation2label --subject ma --hemi lh --outdir ./label/ --lobesStrict lh.lobes
+mri_annotation2label --subject ma --hemi rh --outdir ./label/ --lobesStrict rh.lobes
+mri_annotation2label --subject ma --hemi lh --annotation lobes --ctab label/lobes.annot.ctab
