@@ -20,7 +20,7 @@ function HELP {
 }
 
 hemi="b"
-mlx="${DIR}/meshlab/simplify_clean_texture.mlx"
+mlx="${DIR}/meshlab/simplify_clean_vertex.mlx"
 name="color"
 
 while getopts s:b:u:p:m:n:h FLAG; do
@@ -54,7 +54,7 @@ while getopts s:b:u:p:m:n:h FLAG; do
 done
 
 #make 3d printing output folder
-mkdir ${path}/3dp
+mkdir -p ${path}/3dp
 
 LOG=${path}/3dp/fsto3d.log
 
