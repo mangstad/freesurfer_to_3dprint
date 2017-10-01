@@ -24,3 +24,9 @@ just leaving this here for the moment to remind me how to generate lobe files
 mri_annotation2label --subject ma --hemi lh --outdir ./label/ --lobesStrict lh.lobes
 mri_annotation2label --subject ma --hemi rh --outdir ./label/ --lobesStrict rh.lobes
 mri_annotation2label --subject ma --hemi lh --annotation lobes --ctab label/lobes.annot.ctab
+
+
+data in the sample output folder were generated with:
+./fsto3d.sh -s ./sample_data/ma/
+and
+./fsto3d.sh -s ./sample_data/ma/ -p lobes
