@@ -19,13 +19,11 @@ function HELP {
     exit 1
 }
 
-PYENV='/usr/bin'
-DIR='.'
-VERSION='2.7'
-
 hemi="b"
+mlx="${DIR}/meshlab/simplify_clean_texture.mlx"
+name="color"
 
-while getopts s:b:u:p:h FLAG; do
+while getopts s:b:u:p:m:n:h FLAG; do
     case $FLAG in
 	s)
 	    path=$OPTARG
@@ -38,7 +36,13 @@ while getopts s:b:u:p:h FLAG; do
 	    ;;
 	p)
 	    parc=$OPTARG
-	;;
+	    ;;
+	m)
+	    mlx=$OPTARG
+	    ;;
+	n)
+	    name=$OPTARG
+	    ;;
 	h)
 	    HELP
 	    ;;
@@ -87,29 +91,29 @@ fi
 #convert to vertex-colored obj file
 if [ $hemi = "b" ];
 then
-    ${DIR}/srf2obj_color ${path}/3dp/lh.${surf}.${parc}.color.asc > ${path}/3dp/lh.${surf}.${parc}.color.obj 
-    ${DIR}/srf2obj_color ${path}/3dp/rh.${surf}.${parc}.color.asc > ${path}/3dp/rh.${surf}.${parc}.color.obj 
+    ${DIR}/srf2obj_color ${path}/3dp/lh.${surf}.${parc}.color.asc > ${path}/3dp/lh.${surf}.${parc}.${name}.obj 
+    ${DIR}/srf2obj_color ${path}/3dp/rh.${surf}.${parc}.color.asc > ${path}/3dp/rh.${surf}.${parc}.${name}.obj 
 else
-    ${DIR}/srf2obj_color ${path}/3dp/${hemi}.${surf}.${parc}.color.asc > ${path}/3dp/${hemi}.${surf}.${parc}.color.obj 
+    ${DIR}/srf2obj_color ${path}/3dp/${hemi}.${surf}.${parc}.color.asc > ${path}/3dp/${hemi}.${surf}.${parc}.${name}.obj 
 fi
 
 #now run meshlabserver script to reduce complexity, fix some potential issues, and convert vertex coloring to texture map
 if [ $hemi = "b" ];
 then
-    cp ${DIR}/meshlab/simplify_clean_texture.mlx ${path}/3dp/sct.mlx
-    sed -i "s/TEMP_TEXTURE/lh.${surf}.${parc}/" ${path}/3dp/sct.mlx
-    meshlabserver -i ${path}/3dp/lh.${surf}.${parc}.color.obj -s ${path}/3dp/sct.mlx -o ${path}/3dp/lh.${surf}.${parc}.color.final.x3d -om vc fc fn wc wn wt >> ${LOG}
-    rm ${path}/3dp/sct.mlx
+    cp ${mlx} ${path}/3dp/script.mlx
+    sed -i "s/TEMP_TEXTURE/lh.${surf}.${parc}/" ${path}/3dp/script.mlx
+    meshlabserver -i ${path}/3dp/lh.${surf}.${parc}.${name}.obj -s ${path}/3dp/script.mlx -o ${path}/3dp/lh.${surf}.${parc}.${name}.final.x3d -om vc fc fn wc wn wt >> ${LOG}
+    rm ${path}/3dp/script.mlx
     
-    cp ${DIR}/meshlab/simplify_clean_texture.mlx ${path}/3dp/sct.mlx
-    sed -i "s/TEMP_TEXTURE/rh.${surf}.${parc}/" ${path}/3dp/sct.mlx
-    meshlabserver -i ${path}/3dp/rh.${surf}.${parc}.color.obj -s ${path}/3dp/sct.mlx -o ${path}/3dp/rh.${surf}.${parc}.color.final.x3d -om vc fc fn wc wn wt >> ${LOG}
-    rm ${path}/3dp/sct.mlx
+    cp ${mlx} ${path}/3dp/script.mlx
+    sed -i "s/TEMP_TEXTURE/rh.${surf}.${parc}/" ${path}/3dp/script.mlx
+    meshlabserver -i ${path}/3dp/rh.${surf}.${parc}.${name}.obj -s ${path}/3dp/script.mlx -o ${path}/3dp/rh.${surf}.${parc}.${name}.final.x3d -om vc fc fn wc wn wt >> ${LOG}
+    rm ${path}/3dp/script.mlx
 else
-    cp ${DIR}/meshlab/simplify_clean_texture.mlx ${path}/3dp/sct.mlx
-    sed -i "s/TEMP_TEXTURE/${hemi}.${surf}.${parc}/" ${path}/3dp/sct.mlx
-    meshlabserver -i ${path}/3dp/${hemi}.${surf}.${parc}.color.obj -s ${path}/3dp/sct.mlx -o ${path}/3dp/${hemi}.${surf}.${parc}.color.final.x3d -om vc fc fn wc wn wt >> ${LOG}
-    rm ${path}/3dp/sct.mlx
+    cp ${mlx} ${path}/3dp/script.mlx
+    sed -i "s/TEMP_TEXTURE/${hemi}.${surf}.${parc}/" ${path}/3dp/script.mlx
+    meshlabserver -i ${path}/3dp/${hemi}.${surf}.${parc}.${name}.obj -s ${path}/3dp/script.mlx -o ${path}/3dp/${hemi}.${surf}.${parc}.${name}.final.x3d -om vc fc fn wc wn wt >> ${LOG}
+    rm ${path}/3dp/script.mlx
 fi
 
 #cleanup intermediate files
