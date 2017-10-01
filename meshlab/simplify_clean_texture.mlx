@@ -1,0 +1,35 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Quadric Edge Collapse Decimation">
+  <Param type="RichInt" value="50000" name="TargetFaceNum"/>
+  <Param type="RichFloat" value="0" name="TargetPerc"/>
+  <Param type="RichFloat" value="0.3" name="QualityThr"/>
+  <Param type="RichBool" value="false" name="PreserveBoundary"/>
+  <Param type="RichBool" value="false" name="PreserveNormal"/>
+  <Param type="RichBool" value="false" name="PreserveTopology"/>
+  <Param type="RichBool" value="true" name="OptimalPlacement"/>
+  <Param type="RichBool" value="false" name="PlanarQuadric"/>
+  <Param type="RichBool" value="false" name="QualityWeight"/>
+  <Param type="RichBool" value="true" name="AutoClean"/>
+  <Param type="RichBool" value="false" name="Selected"/>
+ </filter>
+ <filter name="Remove Duplicate Faces"/>
+ <filter name="Select non Manifold Edges "/>
+ <filter name="Delete Selected Faces"/>
+ <filter name="Select non Manifold Vertices"/>
+ <filter name="Delete Selected Faces and Vertices"/>
+ <filter name="Trivial Per-Triangle Parametrization ">
+  <Param type="RichInt" value="0" name="sidedim"/>
+  <Param type="RichInt" value="2048" name="textdim"/>
+  <Param type="RichInt" value="1" name="border"/>
+  <Param enum_val0="Basic" enum_val1="Space-optimizing" enum_cardinality="2" type="RichEnum" value="1" name="method"/>
+ </filter>
+ <filter name="Vertex Color to Texture">
+  <Param type="RichString" value="TEMP_TEXTURE.png" name="textName"/>
+  <Param type="RichInt" value="2048" name="textW"/>
+  <Param type="RichInt" value="2048" name="textH"/>
+  <Param type="RichBool" value="false" name="overwrite"/>
+  <Param type="RichBool" value="false" name="assign"/>
+  <Param type="RichBool" value="true" name="pullpush"/>
+ </filter>
+</FilterScript>
