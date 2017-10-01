@@ -1,7 +1,6 @@
 import pandas as pd
+from sys import argv
 
-if __name__ == "__main__":
-    print "test"
 
 #takes input r/g/b values and combines into 24bit value
 def color_to_24bit(r,g,b):
@@ -45,3 +44,9 @@ def combine_asc_color(asc_file,color_file,out_file):
     file.close()
     output.to_csv(out_file,header=None,index=None,sep=' ',mode='a')
     
+
+if __name__ == "__main__":
+    if argv[1] == "-a": #convert ctab
+        convert_ctab(argv[2],argv[3])
+    elif argv[1] == "-b": #merge files
+        combine_asc_color(argv[2],argv[3],argv[4])
