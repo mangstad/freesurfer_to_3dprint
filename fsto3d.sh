@@ -6,7 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ## Let's do some admin work to find out the variables to be used here
 BOLD='\e[1;31m'         # Bold Red
 REV='\e[1;32m'       # Bold Green
-OFF='\e[1;37m'
+OFF=$(tput sgr0)
 
 #Help function
 function HELP {
