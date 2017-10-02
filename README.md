@@ -15,7 +15,7 @@ At the moment the stream is:
    
 Original srf2obj script from Anderson Winkler at https://brainder.org/2012/05/08/importing-freesurfer-cortical-meshes-into-blender/
 
-Credit for figuring out that meshlab can create the texture maps from per-vertex coloring from https://groups.google.com/forum/#!topic/skanect/HBoixK8rdLc
+Credit for helping me figure out that meshlab can create the texture maps from per-vertex coloring from https://groups.google.com/forum/#!topic/skanect/HBoixK8rdLc (though this turns out to be unnecessary as shapeways and probably other places support per-vertex or per-face coloring, which I wasn't aware of initially so went down a rabbit hole of trying to figure out an automated way to UV map the colors on).
 
 Data in the sample output folder were generated with two commands:
 
