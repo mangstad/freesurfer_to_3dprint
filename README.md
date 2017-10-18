@@ -1,4 +1,5 @@
 # freesurfer_to_3dprint
+<img alt="Right Lateral" src="/images/right_lateral.png" width=400>
 utilities to help in 3d printing of freesurfer surface images
 
 This is in early stages. The goal is to have a defined pathway to start with a freesurfer recon-all output and end up with a 3d model ready for 3d printing in full color based on a chosen parcellation.
@@ -21,11 +22,13 @@ Data in the sample output folder were generated with two commands:
 
 ./fsto3d.sh -s ./sample_data/ma/
 
-and 
+Without options, this creates the aparc colored file like this
 
-./fsto3d.sh -s ./sample_data/ma/ -p lobes
+<img alt="Right Lateral" src="/images/right_lateral.png" width=400>
+<img alt="Left Medial" src="/images/left_medial.png" width=400>
+<img alt="Anterior" src="/images/anterior.png" width=400>
 
-The lobes annotation and colortab files were generated from freesurfer like this:
+and the following commands would generate lobe colored files
 
 mri_annotation2label --subject ma --hemi lh --outdir ./label/ --lobesStrict lh.lobes
 
@@ -33,3 +36,24 @@ mri_annotation2label --subject ma --hemi rh --outdir ./label/ --lobesStrict rh.l
 
 mri_annotation2label --subject ma --hemi lh --annotation lobes --ctab label/lobes.annot.ctab
 
+./fsto3d.sh -s ./sample_data/ma/ -p lobes
+
+<img alt="Left Lateral Lobes" src="/images/left_lateral_lobes.png" width=400>
+
+Command Usage:
+```
+$ ./fsto3d.sh
+Basic usage: fsto3d.sh -s /path/to/freesurfer/subject -u [pial|white|inflated] -p annotation
+
+Required Options
+-s   Sets the path to a freesurfer subject
+
+Other options
+-u   Which surface do you want to use. Default is pial
+-p   Which annotation file to use. Default is aparc
+-b   Hemisphere to process (lh or rh). Default is both
+-m   Meshlab script file to apply to the mesh. Default is
+     /home/slab/users/mangstad/repos/freesurfer_to_3dprint/meshlab/simplify_clean_vertex.mlx
+-n   String to include in the name for the final files. Default is color
+-h   Show this help information.
+```
