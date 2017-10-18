@@ -57,3 +57,7 @@ Other options
 -n   String to include in the name for the final files. Default is color
 -h   Show this help information.
 ```
+
+And here's a shot of it uploaded to <a href="http://shapeways.com">Shapeways</a> and passing the required checks for color printing.
+
+<img alt="Shapeways" src="/images/shapeways.png" width=600>
