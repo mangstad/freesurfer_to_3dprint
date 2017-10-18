@@ -29,6 +29,10 @@ name="color"
 surf="pial"
 parc="aparc"
 
+if [ $# -lt 2 ]; then
+    HELP
+fi
+
 while getopts s:b:u:p:m:n:h FLAG; do
     case $FLAG in
 	s)
@@ -54,6 +58,9 @@ while getopts s:b:u:p:m:n:h FLAG; do
 	    ;;
 	\?) #unrecognized option - show help
 	    echo -e \\n"Option -${BOLD}$OPTARG${OFF} not allowed."
+	    HELP
+	    ;;
+	*) #no options
 	    HELP
 	    ;;
     esac
