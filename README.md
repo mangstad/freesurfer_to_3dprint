@@ -1,5 +1,7 @@
 # freesurfer_to_3dprint
 <img alt="Right Lateral" src="/images/right_lateral.png" width=400>
+<img alt="Right Lateral Print" src="/images/lateral.jpg" width=400>
+
 utilities to help in 3d printing of freesurfer surface images
 
 This is in early stages. The goal is to have a defined pathway to start with a freesurfer recon-all output and end up with a 3d model ready for 3d printing in full color based on a chosen parcellation.
@@ -39,6 +41,13 @@ mri_annotation2label --subject ma --hemi lh --annotation lobes --ctab label/lobe
 ./fsto3d.sh -s ./sample_data/ma/ -p lobes
 
 <img alt="Left Lateral Lobes" src="/images/left_lateral_lobes.png" width=400>
+
+Sample Print:
+Here are a few shots of a printed version I had made of one of these through Shapeways full color printing option.
+
+<img alt="Right Lateral Print" src="/images/lateral.jpg" width=400>
+<img alt="Left Medial Print" src="/images/medial.jpg" width=400>
+
 
 Command Usage:
 ```
